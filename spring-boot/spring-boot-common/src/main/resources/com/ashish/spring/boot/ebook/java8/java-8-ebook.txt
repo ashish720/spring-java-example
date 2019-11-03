@@ -1,0 +1,21 @@
+Features : Java -8
+1) Lambda Expression
+   LE is an anonymous function i.e a function without name and being bounded to an identifier.
+   Possible syntax are:
+
+   either
+   (parameters) -> expression      // Function having parameters with single statement.
+   or
+   (parameters) -> { statements; } // Function having parameters with multiple statement.
+   or
+   () -> expression                // Function having no parameters with single statement.
+
+   Eg:
+   (x,y)-> x+y
+
+   How to use,
+   1) First need to create the functional Interface.
+   Ex : public interface AddInteger{ int add(int x,int y);}
+   2) Need to create a object of functional interface using Lembda expression instead of using implementation
+   Ex: AddInteger add=(x,y)->{ return x+y; };
+   3) Java RT will call the function add with implementation defined using Lembda.

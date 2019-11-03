@@ -1,0 +1,77 @@
+{
+  "status": "records",
+  "employees": [
+    {
+      "id": "EMP001",
+      "name": "Jhon",
+      "contact": "9XXXXXXX77",
+      "address": "Washington, D.C.",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP002",
+      "name": "Jim",
+      "contact": "9XXXXXXX77",
+      "address": "Washington, D.C.",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP003",
+      "name": "Ashish",
+      "contact": "9XXXXXXX11",
+      "address": "Bangalore,India",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP004",
+      "name": "Amresh",
+      "contact": "9XXXXXXX77",
+      "address": "Bihar,India",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP005",
+      "name": "Steve",
+      "contact": "9XXXXXXX44",
+      "address": "London,UK",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP006",
+      "name": "Hina",
+      "contact": "9XXXXXXX77",
+      "address": "Bangalore,India",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP007",
+      "name": "Anand",
+      "contact": "8XXXXXXX66",
+      "address": "Gujarat,India",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP008",
+      "name": "Sunil",
+      "contact": "9XXXXXXX77",
+      "address": "Bangalore,India",
+      "type": "Permanent",
+      "comment": "Billable"
+    },
+    {
+      "id": "EMP009",
+      "name": "Stephen",
+      "contact": "9XXXXXXX66",
+      "address": "London,UK",
+      "type": "Permanent",
+      "comment": "Billable"
+    }
+  ]
+}
