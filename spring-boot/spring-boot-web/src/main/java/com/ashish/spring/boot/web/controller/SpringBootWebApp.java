@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
         "com.ashish.spring.boot.dao",
         "com.ashish.spring.boot.service",
         "com.ashish.spring.boot.web",
-        "com.ashish.spring.boot.apigateway.ms"
+        "com.ashish.spring.boot.dp.apigateway.ms"
         })
 public class SpringBootWebApp extends SpringBootServletInitializer {
 
