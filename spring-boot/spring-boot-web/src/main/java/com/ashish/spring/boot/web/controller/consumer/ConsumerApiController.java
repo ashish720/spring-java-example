@@ -1,6 +1,7 @@
 package com.ashish.spring.boot.web.controller.consumer;
 
 import com.ashish.spring.boot.common.jsonmapper.ObjectToJsonMap;
+import com.ashish.spring.boot.common.util.RequestUtils;
 import com.ashish.spring.boot.pojo.dto.ApiDetailDTOs;
 import com.ashish.spring.boot.pojo.dto.EmployeeResponseDTO;
 import com.ashish.spring.boot.pojo.io.ApiDetailIOs;
@@ -50,16 +51,10 @@ public class ConsumerApiController {
         EmployeeResponseDTO employeeResponseDTO=null;
         if(deleteIds.split(",").length>1){
             String jsonBody = (String)objectToJsonMap.convertObjectToJson(EmployeeApiUtils.createEmployeeRequest(deleteIds));
-            employeeResponseDTO=employeeService.invokeDeleteMultipleRecord(jsonBody, addHeader());
+            employeeResponseDTO=employeeService.invokeDeleteMultipleRecord(jsonBody, RequestUtils.addJsonMediaInHeader());
         }else{
-            employeeResponseDTO=employeeService.invokeDeleteSingleRecord(deleteIds, addHeader());
+            employeeResponseDTO=employeeService.invokeDeleteSingleRecord(deleteIds, RequestUtils.addJsonMediaInHeader());
         }
         return (EmployeeResponseIO)employeeMapper.mapToJsonObject(employeeResponseDTO);
-    }
-
-    private Map<String,String> addHeader(){
-        Map<String,String> headers = new HashMap<>();
-        headers.put("Content-Type","application/json");
-        return headers;
     }
 }
