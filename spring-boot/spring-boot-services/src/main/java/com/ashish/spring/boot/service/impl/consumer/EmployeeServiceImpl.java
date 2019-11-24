@@ -2,7 +2,9 @@ package com.ashish.spring.boot.service.impl.consumer;
 
 import com.ashish.spring.boot.common.constant.EmployeeConstants;
 import com.ashish.spring.boot.common.jsonmapper.JsonToObject;
+import com.ashish.spring.boot.common.properties.ClientApiData;
 import com.ashish.spring.boot.common.properties.ProducerApiData;
+import com.ashish.spring.boot.common.util.RequestUtils;
 import com.ashish.spring.boot.pojo.dto.EmployeeResponseDTO;
 import com.ashish.spring.boot.common.constant.BootHttpConstant;
 import com.ashish.spring.boot.service.consumer.EmployeeService;
@@ -39,6 +41,12 @@ public class EmployeeServiceImpl implements EmployeeService, JsonToObject<Employ
     @Override
     public EmployeeResponseDTO invokeDeleteMultipleRecord(String jsonBody, Map<String, String> headerMap) {
         ResponseEntity<String> result=httpService.invokeRestApi(producerApiData.getMultipleDeleteRecordUrl(),jsonBody,headerMap, HttpMethod.DELETE);
+        return responseBodyToObject(result.getBody());
+    }
+
+    @Override
+    public EmployeeResponseDTO fetchAllEmployees() {
+        ResponseEntity<String> result = httpService.invokeRestApi(producerApiData.getFetchAllEmployeeUrl(),null, RequestUtils.addJsonMediaInHeader(),HttpMethod.GET);
         return responseBodyToObject(result.getBody());
     }
 

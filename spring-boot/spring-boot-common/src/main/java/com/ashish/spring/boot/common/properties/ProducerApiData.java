@@ -16,6 +16,8 @@ public class ProducerApiData {
     private String repoFileCompareUrl;
     @Value("${duplicate.key.collector.url}")
     private String duplicateKeyUrl;
+    @Value(value = "${fetch.all.employee.records}")
+    private String fetchAllEmployeeUrl;
 
     public String getSingleDeleteRecordUrl() {
         return singleDeleteRecordUrl;
@@ -47,5 +49,13 @@ public class ProducerApiData {
 
     public void setDuplicateKeyUrl(String duplicateKeyUrl) {
         this.duplicateKeyUrl = duplicateKeyUrl;
+    }
+
+    public String getFetchAllEmployeeUrl() {
+        return fetchAllEmployeeUrl;
+    }
+
+    public void setFetchAllEmployeeUrl(String fetchAllEmployeeUrl) {
+        this.fetchAllEmployeeUrl = fetchAllEmployeeUrl;
     }
 }

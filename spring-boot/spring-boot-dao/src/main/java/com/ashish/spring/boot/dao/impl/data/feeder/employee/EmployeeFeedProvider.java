@@ -1,4 +1,4 @@
-package com.ashish.spring.boot.dao.impl.delete;
+package com.ashish.spring.boot.dao.impl.data.feeder.employee;
 
 import com.ashish.spring.boot.common.constant.EmployeeConstants;
 import com.ashish.spring.boot.dao.data.DataProvider;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 @Repository
-public class EmployeeDataProvider implements DataProvider<EmployeeResponseDTO> {
+public class EmployeeFeedProvider implements DataProvider<EmployeeResponseDTO> {
 
     @Override
     public EmployeeResponseDTO fetchData(String fileName){

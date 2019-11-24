@@ -14,7 +14,7 @@
       "name": "Jim",
       "contact": "9XXXXXXX77",
       "address": "Washington, D.C.",
-      "type": "Permanent",
+      "type": "Provisional",
       "comment": "Billable"
     },
     {
@@ -54,7 +54,7 @@
       "name": "Anand",
       "contact": "8XXXXXXX66",
       "address": "Gujarat,India",
-      "type": "Permanent",
+      "type": "Provisional",
       "comment": "Billable"
     },
     {
@@ -62,7 +62,7 @@
       "name": "Sunil",
       "contact": "9XXXXXXX77",
       "address": "Bangalore,India",
-      "type": "Permanent",
+      "type": "Provisional",
       "comment": "Billable"
     },
     {

@@ -1,9 +1,7 @@
 package com.ashish.spring.boot.service.impl.get;
 
 import com.ashish.spring.boot.common.constant.EmployeeConstants;
-import com.ashish.spring.boot.dao.data.DataProvider;
-import com.ashish.spring.boot.dao.impl.delete.EmployeeDataProvider;
-import com.ashish.spring.boot.pojo.dto.EmployeeDTOs;
+import com.ashish.spring.boot.dao.impl.data.feeder.employee.EmployeeFeedProvider;
 import com.ashish.spring.boot.pojo.dto.EmployeeResponseDTO;
 import com.ashish.spring.boot.service.get.GetService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +12,8 @@ import org.springframework.stereotype.Service;
 public class GetEmployeeServiceImpl implements GetService<EmployeeResponseDTO> {
 
     @Autowired
-    @Qualifier("employeeDataProvider")
-    private EmployeeDataProvider employeeDataProvider;
+    @Qualifier("employeeFeedProvider")
+    private EmployeeFeedProvider employeeDataProvider;
 
     @Override
     public EmployeeResponseDTO fetchAllRecords() {
