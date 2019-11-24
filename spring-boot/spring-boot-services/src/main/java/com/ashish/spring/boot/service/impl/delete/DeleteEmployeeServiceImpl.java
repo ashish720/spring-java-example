@@ -1,7 +1,7 @@
 package com.ashish.spring.boot.service.impl.delete;
 
 import com.ashish.spring.boot.common.constant.EmployeeConstants;
-import com.ashish.spring.boot.dao.impl.delete.EmployeeDataProvider;
+import com.ashish.spring.boot.dao.impl.data.feeder.employee.EmployeeFeedProvider;
 import com.ashish.spring.boot.pojo.dto.EmployeeDTO;
 import com.ashish.spring.boot.pojo.dto.EmployeeResponseDTO;
 import com.ashish.spring.boot.pojo.dto.ErrorDTO;
@@ -17,7 +17,7 @@ import java.util.List;
 public class DeleteEmployeeServiceImpl implements DeleteService<EmployeeResponseDTO> {
 
     @Autowired
-    private EmployeeDataProvider employeeDataProvider;
+    private EmployeeFeedProvider employeeDataProvider;
 
     @Override
     public EmployeeResponseDTO deleteListOfRecordById(List<Object> ids) {

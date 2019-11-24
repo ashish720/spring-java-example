@@ -15,10 +15,10 @@ public class EmployeeMapperImpl implements IOClassMapper<EmployeeResponseIO, Emp
 
     @Override
     public EmployeeResponseIO mapToJsonObject(EmployeeResponseDTO input) {
-        EmployeeResponseIO employeeResponseIO = new EmployeeResponseIO();
         if(input==null || input.getEmployees()==null || input.getEmployees().isEmpty()){
-            return createEmpErrorResponse(EmployeeConstants.EMPLOYEE_FAILED, input.getError());
+            return (EmployeeResponseIO)createEmpErrorResponse(EmployeeConstants.EMPLOYEE_FAILED, input.getError());
         }
+        EmployeeResponseIO employeeResponseIO = new EmployeeResponseIO();
         employeeResponseIO.setStatus("SUCCESS");
         employeeResponseIO.setEmployees(new ArrayList<>());
         input.getEmployees().forEach(item->{

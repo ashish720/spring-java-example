@@ -11,6 +11,8 @@ public class EmployeeResponseDTO {
     private String status;
     private int noOfRecords;
     private List<EmployeeDTO> employees;
+    private List<EmployeeDTO> permanents;
+    private List<EmployeeDTO> provisionals;
     private ErrorDTO error;
 
     public String getStatus() {
@@ -32,6 +34,20 @@ public class EmployeeResponseDTO {
     public List<EmployeeDTO> getEmployees() {
         if(this.employees==null){this.employees=new ArrayList<>();}
         return employees;
+    }
+
+    public List<EmployeeDTO> getPermanents() {
+        if(this.permanents==null){
+            this.permanents=new ArrayList<>();
+        }
+        return permanents;
+    }
+
+    public List<EmployeeDTO> getProvisionals() {
+        if(this.provisionals==null){
+            this.provisionals=new ArrayList<>();
+        }
+        return provisionals;
     }
 
     public void setEmployees(List<EmployeeDTO> employees) {

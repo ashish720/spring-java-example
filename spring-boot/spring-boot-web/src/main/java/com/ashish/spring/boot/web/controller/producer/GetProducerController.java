@@ -22,7 +22,7 @@ public class GetProducerController {
     @Qualifier("employeeMapperImpl")
     private IOClassMapper employeeMapper;
 
-    @GetMapping(BootWebConstant.BOOT_CONSUMER_API+"/fetch/user/details")
+    @GetMapping(BootWebConstant.BOOT_PRODUCER_API+"/fetch/user/details")
     public EmployeeResponseIO fetchAllEmployee(){
         EmployeeResponseDTO employeeResponseDTO=(EmployeeResponseDTO)getService.fetchAllRecords();
         employeeResponseDTO.setNoOfRecords(employeeResponseDTO.getEmployees().size());

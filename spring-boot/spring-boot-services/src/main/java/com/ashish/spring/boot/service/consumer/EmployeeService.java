@@ -11,6 +11,8 @@ public interface EmployeeService {
 
     EmployeeResponseDTO invokeDeleteMultipleRecord(String jsonBody, Map<String, String> headerMap);
 
+    EmployeeResponseDTO fetchAllEmployees();
+
     default EmployeeResponseDTO createErrorResponse(String status, String code, String message){
         EmployeeResponseDTO employeeResponseDTO = new EmployeeResponseDTO();
         employeeResponseDTO.setStatus(status);

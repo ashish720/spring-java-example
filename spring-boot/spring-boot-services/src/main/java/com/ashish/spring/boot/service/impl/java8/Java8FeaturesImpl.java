@@ -2,6 +2,7 @@ package com.ashish.spring.boot.service.impl.java8;
 
 import com.ashish.spring.boot.common.util.StreamUtils;
 import com.ashish.spring.boot.pojo.dto.EmployeeDTO;
+import com.ashish.spring.boot.pojo.dto.EmployeeResponseDTO;
 import com.ashish.spring.boot.pojo.io.LembdaAddIO;
 import com.ashish.spring.boot.service.java8.Java8Features;
 import com.ashish.spring.boot.service.java8.LembdaExpression;
@@ -25,5 +26,16 @@ public class Java8FeaturesImpl implements Java8Features {
         }
         StreamUtils.forEachIteration(employeeList);
         StreamUtils.orderForEachIteration(employeeList);
+    }
+
+    @Override
+    public void streamFilteration(String filterCrtiteria, String filterKey,EmployeeResponseDTO employeeResponseDTO) {
+        if(filterCrtiteria==null
+                || employeeResponseDTO==null
+                || employeeResponseDTO.getEmployees()==null
+                || employeeResponseDTO.getEmployees().isEmpty()){
+            return;
+        }
+        StreamUtils.filterStreams(filterCrtiteria,filterKey,employeeResponseDTO);
     }
 }

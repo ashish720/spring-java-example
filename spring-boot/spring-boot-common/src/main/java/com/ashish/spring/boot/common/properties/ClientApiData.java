@@ -92,4 +92,8 @@ public class ClientApiData {
         apiDetails.put("LFN", Arrays.asList(this.leftFileName));
         return apiDetails;
     }
+
+    public String getFetchAllEmployee() {
+        return fetchAllEmployee;
+    }
 }
